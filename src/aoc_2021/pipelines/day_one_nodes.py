@@ -13,8 +13,8 @@ def clean_day1_data(data: str) -> pd.DataFrame:
 nodes.append(
     node(
         func=clean_day1_data,
-        inputs="a_raw_day_one_test",
-        # inputs="a_raw_day_one",
+        #inputs="a_raw_day_one_test",
+        inputs="a_raw_day_one",
         outputs="b_int_day_one",
         name="create_b_int_day_one",
     )

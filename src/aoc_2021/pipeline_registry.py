@@ -32,6 +32,7 @@ from typing import Dict
 from kedro.pipeline import Pipeline
 
 from .pipelines.day_one_nodes import nodes as day_one_nodes
+from .pipelines.day_two_nodes import nodes as day_two_nodes
 
 
 def register_pipelines() -> Dict[str, Pipeline]:
@@ -40,4 +41,4 @@ def register_pipelines() -> Dict[str, Pipeline]:
     Returns:
         A mapping from a pipeline name to a ``Pipeline`` object.
     """
-    return {"day_one": Pipeline(day_one_nodes), "day_two": Pipeline([])}
+    return {"day_one": Pipeline(day_one_nodes), "day_two": Pipeline(day_two_nodes)}
