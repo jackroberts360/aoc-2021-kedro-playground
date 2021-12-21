@@ -1,5 +1,7 @@
 from kedro.pipeline import node
 import pandas as pd
+from typing import Tuple
+from more_itertools import windowed
 
 
 nodes = []
@@ -53,6 +55,44 @@ nodes.append(
     )
 )
 
+<<<<<<< HEAD
+=======
+
+def get_rolling_sum(day_one: pd.DataFrame) -> pd.DataFrame:
+
+    pass
+
+
+class DataFrameHasNotThreeRows(BaseException):
+    pass
+
+
+def get_sum_of_three_consecutive_rows(tup: Tuple[int, int, int]) -> int:
+    """get_sum_of_three_consecutive_rows.
+
+    Args:
+        tup: Tuple
+    Returns:
+        int:
+    """
+    if len(tup) != 3:
+        raise DataFrameHasNotThreeRows
+    return sum(tup)
+
+
+def get_all_windowed_sums(day_one: pd.DataFrame) -> pd.DataFrame:
+    res = []
+    for s in windowed(day_one.iloc[:, 0].values, 3):
+        res.append(get_sum_of_three_consecutive_rows(s))
+    return pd.DataFrame({0: res})
+
+
+def count_increases_slider(day_one: pd.DataFrame) -> str:
+    sums = get_all_windowed_sums(day_one)
+    return count_increases(sums)
+
+
+>>>>>>> d8bf516f23afc7627dd1d2acb9919680468a3ecd
 nodes.append(
     node(
         func=count_increases_slider,
@@ -61,8 +101,11 @@ nodes.append(
         name="create_d_fea_day_one_slider_count",
     )
 )
+<<<<<<< HEAD
 
 def count_increases_slider(day_one: pd.DataFrame) -> str:
     pass
 
 def get_rolling_sum():
+=======
+>>>>>>> d8bf516f23afc7627dd1d2acb9919680468a3ecd
