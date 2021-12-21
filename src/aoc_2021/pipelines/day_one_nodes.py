@@ -52,3 +52,17 @@ nodes.append(
         name="create_d_fea_day_one_count",
     )
 )
+
+nodes.append(
+    node(
+        func=count_increases_slider,
+        inputs=["c_pri_day_one"],
+        outputs="d_fea_day_one_slider_count",
+        name="create_d_fea_day_one_slider_count",
+    )
+)
+
+def count_increases_slider(day_one: pd.DataFrame) -> str:
+    pass
+
+def get_rolling_sum():
