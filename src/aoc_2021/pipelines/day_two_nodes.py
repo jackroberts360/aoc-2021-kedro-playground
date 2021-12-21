@@ -24,7 +24,7 @@ def find_position(day_two: pd.DataFrame) -> str:
     forward_position = get_sum_of_distance(filter_dataframe_by_direction(day_two, "forward"))
     up_position = get_sum_of_distance(filter_dataframe_by_direction(day_two, "up"))
     down_position = get_sum_of_distance(filter_dataframe_by_direction(day_two, "down"))
-    return calculate_final_position(forward_position, up_position, down_position)
+    return str(calculate_final_position(forward_position, up_position, down_position))
     
     
 def calculate_final_position(forward: int, up: int, down: int) -> int:
@@ -70,8 +70,8 @@ def get_sum_of_distance(df: pd.DataFrame) -> int:
 nodes.append(
     node(
         func=clean_day2_data,
-        inputs="a_raw_day_two_test",
-        # inputs="a_raw_day_two",
+        #inputs="a_raw_day_two_test",
+        inputs="a_raw_day_two",
         outputs="b_int_day_two",
         name="create_b_int_day_two",
     )
@@ -89,8 +89,8 @@ nodes.append(
     node(
         func=find_position,
         inputs=["c_pri_day_two"],
-        outputs="d_fea_day_two_count",
-        name="create_d_fea_day_two_count",
+        outputs="d_fea_day_two_position",
+        name="create_d_fea_day_two_position",
     )
 )  
 

@@ -55,14 +55,6 @@ nodes.append(
     )
 )
 
-<<<<<<< HEAD
-=======
-
-def get_rolling_sum(day_one: pd.DataFrame) -> pd.DataFrame:
-
-    pass
-
-
 class DataFrameHasNotThreeRows(BaseException):
     pass
 
@@ -92,7 +84,6 @@ def count_increases_slider(day_one: pd.DataFrame) -> str:
     return count_increases(sums)
 
 
->>>>>>> d8bf516f23afc7627dd1d2acb9919680468a3ecd
 nodes.append(
     node(
         func=count_increases_slider,
@@ -101,11 +92,3 @@ nodes.append(
         name="create_d_fea_day_one_slider_count",
     )
 )
-<<<<<<< HEAD
-
-def count_increases_slider(day_one: pd.DataFrame) -> str:
-    pass
-
-def get_rolling_sum():
-=======
->>>>>>> d8bf516f23afc7627dd1d2acb9919680468a3ecd

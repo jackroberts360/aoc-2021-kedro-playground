@@ -5,16 +5,14 @@
 a_raw_day_one_test:
     type: text.TextDataSet
     filepath: ./data/day1_sample.txt
-
 a_raw_day_one:
     type: text.TextDataSet
     filepath: ./data/day1.txt
-
 b_int_day_one:
     type: pandas.ParquetDataSet 
     filepath: ./data/b_int/day1.parquet
 c_pri_day_one:
-    type: pandas.ParquetDataSet 
+    type : pandas.ParquetDataSet 
     filepath: ./data/c_pri/day1.parquet
 d_fea_day_one_count:
     type: text.TextDataSet
@@ -22,3 +20,17 @@ d_fea_day_one_count:
 d_fea_day_one_slider_count:
     type: text.TextDataSet
     filepath: ./data/d_fea/day1_slider_count.txt
+
+# day_two nodes
+a_raw_day_two:
+    type: text.TextDataSet
+    filepath: ./data/day2.txt
+b_int_day_two:
+    type: pandas.ParquetDataSet 
+    filepath: ./data/b_int/day2.parquet
+c_pri_day_two:
+    type : pandas.ParquetDataSet 
+    filepath: ./data/c_pri/day2.parquet
+d_fea_day_two_position:
+    type: text.TextDataSet
+    filepath: ./data/d_fea/day2_position.txt
